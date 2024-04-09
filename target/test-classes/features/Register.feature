@@ -1,4 +1,4 @@
-Feature: Rehistration Functionality
+Feature: Registration Functionality
 
 Scenario: Verify and Validate the Registration functionality with mandatory details
 Given user should navigates to the registration page
