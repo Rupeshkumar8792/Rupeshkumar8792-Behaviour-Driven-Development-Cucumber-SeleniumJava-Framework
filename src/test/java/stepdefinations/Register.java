@@ -1,5 +1,6 @@
 package stepdefinations;
 
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -13,7 +14,7 @@ public class Register
 	}
 
 	@When("user enters the details into below fields")
-	public void user_enters_the_details_into_below_fields(io.cucumber.datatable.DataTable dataTable) 
+	public void user_enters_the_details_into_below_fields(DataTable dataTable) 
 	{
 	    
 	}
