@@ -8,10 +8,11 @@ import driverFactory.DriverFactory;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 
+
 public class MyHooks 
 {
 	WebDriver driver;
-	@Before
+	@Before 
 	public void setUp()
 	{
 		DriverFactory.initializeBrowser("chrome");
@@ -22,7 +23,7 @@ public class MyHooks
 		driver.get("https://tutorialsninja.com/demo/");
 	}
 	
-	@After
+	@After 
 	public void tearDown()
 	{
 		driver.quit();

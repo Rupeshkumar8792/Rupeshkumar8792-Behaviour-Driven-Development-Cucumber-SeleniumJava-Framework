@@ -1,8 +1,8 @@
 package stepdefinations;
-
-import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
+
 import driverFactory.DriverFactory;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -41,7 +41,7 @@ public class Login
 	@Then("user should able to log into the app successfully")
 	public void user_should_able_to_log_into_the_app_successfully() 
 	{
-		Assert.assertEquals(null, null);
+		//Assert.assertEquals(null, null);
 	}
 
 	@When("user enters invalid email address {string}")
@@ -60,7 +60,7 @@ public class Login
 	@Then("user should able to view appropriate error message")
 	public void user_should_able_to_view_appropriate_error_message() 
 	{
-		Assert.assertEquals(null, null);
+		//Assert.assertEquals(null, null);
 	}
 
 }
