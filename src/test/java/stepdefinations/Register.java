@@ -1,5 +1,6 @@
 package stepdefinations;
 
+import java.util.Date;
 import java.util.Map;
 
 import org.openqa.selenium.By;
@@ -29,7 +30,7 @@ public class Register
 		 Map<String, String> dataMap =  dataTable.asMap(String.class,String.class);
 		 driver.findElement(By.xpath("//input[@id='input-firstname']")).sendKeys(dataMap.get("firstName"));
 		 driver.findElement(By.xpath("//input[@id='input-lastname']")).sendKeys(dataMap.get("lastName"));
-		 driver.findElement(By.xpath("//input[@id='input-email']")).sendKeys(dataMap.get("email"));
+		 driver.findElement(By.xpath("//input[@id='input-email']")).sendKeys(getEmailwithTimestamps());
 		 driver.findElement(By.xpath("//input[@id='input-telephone']")).sendKeys(dataMap.get("telephone"));
 		 driver.findElement(By.xpath("//input[@id='input-password']")).sendKeys(dataMap.get("password"));
 		 driver.findElement(By.xpath("//input[@id='input-confirm']")).sendKeys(dataMap.get("password"));
@@ -51,8 +52,8 @@ public class Register
 	@Then("user should be able to view the successful registration message")
 	public void user_should_be_able_to_view_the_successful_registration_message() 
 	{
-	   String act = driver.findElement(By.xpath("")).getText();
-	   Assert.assertEquals(false, false);
+	   String act = driver.findElement(By.xpath("//div[@id='content']//h1[text()='Your Account Has Been Created!']")).getText();
+	   Assert.assertEquals(act, "Your Account Has Been Created!");
 	}
 
 	@When("user selects Yes for newsletter")
@@ -60,17 +61,10 @@ public class Register
 	{
 		driver.findElement(By.xpath("//input[@value=\"1\"][@name=\"newsletter\"]")).click();
 	}
-
-	@Then("user should be able to view the appropriate error message")
-	public void user_should_be_able_to_view_the_appropriate_error_message() 
+	
+	private String getEmailwithTimestamps()
 	{
-	    Assert.assertTrue(false);
-	}
-
-	@When("user does not enter any details")
-	public void user_does_not_enter_any_details() 
-	{
-		Assert.assertTrue(driver.findElement(By.xpath("\"//div[text()='Warning: You must agree to the Privacy Policy!']\"")).isDisplayed());
-		Assert.assertEquals(driver.findElement(By.xpath("//input[@id=\"input-firstname\"]//following-sibling::div")).getText(), "First Name must be between 1 and 32 characters!");
+		Date date = new Date();
+		return "rupesh.surya"+date.toString().replace(" ", "_").replace(":", "_")+"@gmail.com";
 	}
 }

@@ -65,7 +65,7 @@ public class Login
 		//Assert.assertEquals(null, null);
 	}
 	
-	public String getEmailwithTimestamps()
+	private String getEmailwithTimestamps()
 	{
 		Date date = new Date();
 		return "rupesh.surya"+date.toString().replace(" ", "_").replace(":", "_")+"@gmail.com";
