@@ -12,16 +12,20 @@ import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import pages.HomePage;
 
 public class Register 
 {
 	WebDriver driver = DriverFactory.getDriver();
+	HomePage gHomePage;
 	
 	@Given("user should navigates to the registration page")
 	public void user_should_navigates_to_the_registration_page() 
 	{
-		driver.findElement(By.xpath("//span[text()='My Account']")).click();
-		driver.findElement(By.xpath("//a[text()='Register']")).click();
+		gHomePage = new HomePage(driver);
+		gHomePage.clickOnMyAccount();
+		gHomePage.clickOnRegister();
+		
 	}
 
 	@When("user enters the details into below fields")
