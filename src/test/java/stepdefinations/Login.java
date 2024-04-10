@@ -9,16 +9,18 @@ import driverFactory.DriverFactory;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import pages.HomePage;
 
 public class Login 
 {
 	WebDriver driver = DriverFactory.getDriver();
-
+	HomePage gHomePage;
 	@Given("user should navigate to the login page")
 	public void user_should_navigate_to_the_login_page() 
 	{
-		driver.findElement(By.xpath("//span[text()='My Account']")).click();
-		driver.findElement(By.xpath("//a[text()='Login']")).click();
+		gHomePage = new HomePage(driver);
+		gHomePage.clickOnMyAccount();
+		gHomePage.clickOnRegister();
 	}
 
 	@When("user enters valid email address {string}")
