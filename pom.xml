@@ -50,6 +50,18 @@
     <artifactId>cucumber-testng</artifactId>
     <version>7.16.1</version>
 </dependency>
+<!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+<dependency>
+    <groupId>io.github.bonigarcia</groupId>
+    <artifactId>webdrivermanager</artifactId>
+    <version>5.8.0</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-java</artifactId>
+    <version>4.19.1</version>
+</dependency>
 
   </dependencies>
 
