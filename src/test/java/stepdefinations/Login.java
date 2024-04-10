@@ -1,4 +1,6 @@
 package stepdefinations;
+import java.util.Date;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
@@ -47,7 +49,7 @@ public class Login
 	@When("user enters invalid email address {string}")
 	public void user_enters_invalid_email_address(String string) 
 	{
-		driver.findElement(By.xpath("//input[@id='input-email']")).sendKeys(string);
+		driver.findElement(By.xpath("//input[@id='input-email']")).sendKeys(getEmailwithTimestamps());
 	}
 
 	@When("user enters invalid password {string}")
@@ -61,6 +63,12 @@ public class Login
 	public void user_should_able_to_view_appropriate_error_message() 
 	{
 		//Assert.assertEquals(null, null);
+	}
+	
+	public String getEmailwithTimestamps()
+	{
+		Date date = new Date();
+		return "rupesh.surya"+date.toString().replace(" ", "_").replace(":", "_")+"@gmail.com";
 	}
 
 }
