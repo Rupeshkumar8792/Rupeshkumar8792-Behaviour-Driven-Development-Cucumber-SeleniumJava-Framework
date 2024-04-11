@@ -1,10 +1,8 @@
 package stepdefinations;
 import java.util.Date;
 import java.util.Properties;
-
 import org.openqa.selenium.WebDriver;
 import org.testng.asserts.SoftAssert;
-
 import driverFactory.DriverFactory;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -12,6 +10,7 @@ import io.cucumber.java.en.When;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.MyAccountPage;
+import utils.CommonUtils;
 import utils.ConfigReader;
 
 public class Login 
@@ -67,8 +66,7 @@ public class Login
 	public void user_enters_invalid_email_address(String invalidEmail) 
 	{
 		gLoginPage = new LoginPage(driver);
-		gLoginPage.enterEmailId(getEmailwithTimestamps());
-		//driver.findElement(By.xpath("//input[@id='input-email']")).sendKeys(getEmailwithTimestamps());
+		gLoginPage.enterEmailId(CommonUtils.getEmailwithTimestamps());
 	}
 
 	@When("user enters invalid password {string}")
@@ -78,7 +76,6 @@ public class Login
 		gLoginPage.enterPassword(invalidPassword);
 	}
 
-	@SuppressWarnings("deprecation")
 	@Then("user should able to view appropriate error message")
 	public void user_should_able_to_view_appropriate_error_message() 
 	{	
@@ -88,10 +85,4 @@ public class Login
 		sa.assertTrue(gLoginPage.getErrorText());
 	}
 	
-	private String getEmailwithTimestamps()
-	{
-		Date date = new Date();
-		return "rupesh.surya"+date.toString().replace(" ", "_").replace(":", "_")+"@gmail.com";
-	}
-
 }
