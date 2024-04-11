@@ -23,6 +23,9 @@ public class LoginPage
 	@FindBy(xpath = "//input[@value='Login']")
 	private WebElement loginBTN;
 	
+	@FindBy
+	private WebElement errorMessage;
+	
 	public void enterEmailId(String emailID) 
 	{
 		emailId.sendKeys(emailID);
@@ -36,6 +39,11 @@ public class LoginPage
 	public void clickOnLoginButton()
 	{
 		loginBTN.click();
+	}
+	
+	public String getErrorText()
+	{
+		return errorMessage.getText();
 	}
 		
 }
