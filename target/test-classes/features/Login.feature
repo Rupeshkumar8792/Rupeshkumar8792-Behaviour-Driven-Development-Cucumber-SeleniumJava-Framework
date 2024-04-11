@@ -2,8 +2,8 @@ Feature: Login Functionality
 
   Scenario: Verify and Validate the login functionality with valid credentials
     Given user should navigate to the login page
-    When user enters valid email address "rupesh.surya62@gmail.com"
-    And user enters valid password "test@1234"
+    When user enters valid email address "rupesh.surya6212@gmail.com"
+    And user enters valid password "mahadev@1234"
     And user clicks on login button
     Then user should able to log into the app successfully
 
