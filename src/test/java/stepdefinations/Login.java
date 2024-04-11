@@ -2,7 +2,6 @@ package stepdefinations;
 import java.util.Date;
 import java.util.Properties;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.asserts.SoftAssert;
 
@@ -12,6 +11,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.HomePage;
 import pages.LoginPage;
+import pages.MyAccountPage;
 import utils.ConfigReader;
 
 public class Login 
@@ -19,6 +19,8 @@ public class Login
 	WebDriver driver = DriverFactory.getDriver();
 	HomePage gHomePage;
 	LoginPage gLoginPage;
+	MyAccountPage gMyAccountPage;
+	
 	Properties prop = ConfigReader.intializeProperties();
 	
 	@Given("user should navigate to the login page")
@@ -54,7 +56,11 @@ public class Login
 	@Then("user should able to log into the app successfully")
 	public void user_should_able_to_log_into_the_app_successfully() 
 	{
-		//Assert.assertEquals(null, null);
+		gMyAccountPage = new MyAccountPage(driver);
+		
+		SoftAssert sa = new SoftAssert();
+		sa.assertTrue(gMyAccountPage.editYourAccountInformationText());
+		
 	}
 
 	@When("user enters invalid email address {string}")
@@ -70,7 +76,6 @@ public class Login
 	{
 		gLoginPage = new LoginPage(driver);
 		gLoginPage.enterPassword(invalidPassword);
-		//driver.findElement(By.xpath("//input[@id='input-password']")).sendKeys(invalidPassword);
 	}
 
 	@SuppressWarnings("deprecation")
