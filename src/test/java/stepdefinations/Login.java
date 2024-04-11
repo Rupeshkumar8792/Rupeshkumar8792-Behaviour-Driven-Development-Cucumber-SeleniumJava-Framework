@@ -1,8 +1,10 @@
 package stepdefinations;
 import java.util.Date;
+import java.util.Properties;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.testng.asserts.SoftAssert;
 
 import driverFactory.DriverFactory;
 import io.cucumber.java.en.Given;
@@ -10,12 +12,14 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.HomePage;
 import pages.LoginPage;
+import utils.ConfigReader;
 
 public class Login 
 {
 	WebDriver driver = DriverFactory.getDriver();
 	HomePage gHomePage;
 	LoginPage gLoginPage;
+	Properties prop;
 	
 	@Given("user should navigate to the login page")
 	public void user_should_navigate_to_the_login_page() 
@@ -54,22 +58,26 @@ public class Login
 	}
 
 	@When("user enters invalid email address {string}")
-	public void user_enters_invalid_email_address(String string) 
+	public void user_enters_invalid_email_address(String invalidEmail) 
 	{
 		driver.findElement(By.xpath("//input[@id='input-email']")).sendKeys(getEmailwithTimestamps());
 	}
 
 	@When("user enters invalid password {string}")
-	public void user_enters_invalid_password(String string) 
+	public void user_enters_invalid_password(String invalidPassword) 
 	{
-		driver.findElement(By.xpath("//input[@id='input-password']")).sendKeys(string);
+		driver.findElement(By.xpath("//input[@id='input-password']")).sendKeys(invalidPassword);
 	}
 
 	@SuppressWarnings("deprecation")
 	@Then("user should able to view appropriate error message")
 	public void user_should_able_to_view_appropriate_error_message() 
 	{
-		//Assert.assertEquals(null, null);
+		prop = ConfigReader.intializeProperties();
+		gLoginPage = new LoginPage(driver);
+		
+		SoftAssert sa = new SoftAssert();
+		sa.assertEquals(gLoginPage.getErrorText(), prop.getProperty("loginerrormessage"));
 	}
 	
 	private String getEmailwithTimestamps()
