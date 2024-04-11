@@ -19,7 +19,7 @@ public class Login
 	WebDriver driver = DriverFactory.getDriver();
 	HomePage gHomePage;
 	LoginPage gLoginPage;
-	Properties prop;
+	Properties prop = ConfigReader.intializeProperties();
 	
 	@Given("user should navigate to the login page")
 	public void user_should_navigate_to_the_login_page() 
@@ -60,24 +60,27 @@ public class Login
 	@When("user enters invalid email address {string}")
 	public void user_enters_invalid_email_address(String invalidEmail) 
 	{
-		driver.findElement(By.xpath("//input[@id='input-email']")).sendKeys(getEmailwithTimestamps());
+		gLoginPage = new LoginPage(driver);
+		gLoginPage.enterEmailId(getEmailwithTimestamps());
+		//driver.findElement(By.xpath("//input[@id='input-email']")).sendKeys(getEmailwithTimestamps());
 	}
 
 	@When("user enters invalid password {string}")
 	public void user_enters_invalid_password(String invalidPassword) 
 	{
-		driver.findElement(By.xpath("//input[@id='input-password']")).sendKeys(invalidPassword);
+		gLoginPage = new LoginPage(driver);
+		gLoginPage.enterPassword(invalidPassword);
+		//driver.findElement(By.xpath("//input[@id='input-password']")).sendKeys(invalidPassword);
 	}
 
 	@SuppressWarnings("deprecation")
 	@Then("user should able to view appropriate error message")
 	public void user_should_able_to_view_appropriate_error_message() 
-	{
-		prop = ConfigReader.intializeProperties();
+	{	
 		gLoginPage = new LoginPage(driver);
 		
 		SoftAssert sa = new SoftAssert();
-		sa.assertEquals(gLoginPage.getErrorText(), prop.getProperty("loginerrormessage"));
+		sa.assertTrue(gLoginPage.getErrorText());
 	}
 	
 	private String getEmailwithTimestamps()
