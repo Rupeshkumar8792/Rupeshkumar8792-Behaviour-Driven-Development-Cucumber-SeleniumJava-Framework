@@ -19,11 +19,7 @@ public class MyHooks
 	public void setUp()
 	{
 		prop = ConfigReader.intializeProperties();
-		DriverFactory.initializeBrowser(prop.getProperty("browserName"));
-		driver = DriverFactory.getDriver();
-		driver.manage().window().maximize();
-		driver.manage().deleteAllCookies();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+		driver = DriverFactory.initializeBrowser(prop.getProperty("browserName"));
 		driver.get(prop.getProperty("url"));
 	}
 	

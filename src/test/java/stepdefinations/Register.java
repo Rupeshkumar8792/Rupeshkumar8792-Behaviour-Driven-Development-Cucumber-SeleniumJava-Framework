@@ -20,17 +20,15 @@ import utils.ConfigReader;
 public class Register 
 {
 	WebDriver driver = DriverFactory.getDriver();
-	HomePage gHomePage;
-	RegisterPage gRegisterPage;
+	HomePage gHomePage = new HomePage(driver);
+	RegisterPage gRegisterPage = new RegisterPage(driver);
 	Properties prop;
 	
 	@Given("user should navigates to the registration page")
 	public void user_should_navigates_to_the_registration_page() 
-	{
-		gHomePage = new HomePage(driver);
+	{	
 		gHomePage.clickOnMyAccount();
-		gHomePage.clickOnRegister();
-		
+		gHomePage.clickOnRegister();	
 	}
 
 	@When("user enters the details into below fields")
@@ -38,7 +36,6 @@ public class Register
 	{
 		 Map<String, String> dataMap =  dataTable.asMap(String.class,String.class);
 		 
-		 gRegisterPage = new RegisterPage(driver);
 		 gRegisterPage.enterFirstName(dataMap.get("firstName"));
 		 gRegisterPage.enterLastName(dataMap.get("lastName"));
 		 gRegisterPage.enterEmailID(CommonUtils.getEmailwithTimestamps());
@@ -51,17 +48,13 @@ public class Register
 	@When("user checks in user policy")
 	public void user_checks_in_user_policy() 
 	{
-		 gRegisterPage = new RegisterPage(driver);
-		 gRegisterPage.clickOnPrivacyPolicyBTN();
-	  
+		 gRegisterPage.clickOnPrivacyPolicyBTN();  
 	}
 
 	@When("user clicks on continue button")
 	public void user_clicks_on_continue_button() 
 	{
-		 gRegisterPage = new RegisterPage(driver);
-		 gRegisterPage.clickOnContinueBTN();
-		
+		 gRegisterPage.clickOnContinueBTN();	
 	}
 
 	@SuppressWarnings("deprecation")
@@ -76,7 +69,6 @@ public class Register
 	@When("user selects Yes for newsletter")
 	public void user_selects_yes_for_newsletter() 
 	{
-		 gRegisterPage = new RegisterPage(driver);
 		 gRegisterPage.clickOnYesSuscribeButton();
 	}
 	
@@ -85,7 +77,6 @@ public class Register
 	{
  Map<String, String> dataMap =  dataTable.asMap(String.class,String.class);
 		 
-		 gRegisterPage = new RegisterPage(driver);
 		 gRegisterPage.enterFirstName(dataMap.get("firstName"));
 		 gRegisterPage.enterLastName(dataMap.get("lastName"));
 		 gRegisterPage.enterEmailID(dataMap.get("email"));
@@ -97,22 +88,18 @@ public class Register
 	@Then("user should be able to view appropriate error message")
 	public void user_should_be_able_to_view_appropriate_error_message() 
 	{
-		 gRegisterPage = new RegisterPage(driver);
 		 Assert.assertEquals(gRegisterPage.failureMessage(), "Warning: E-Mail Address is already registered!");
 	}
 	
 	@When("user dont enter any details into fields")
 	public void user_dont_enter_any_details_into_fields() 
 	{
-		gRegisterPage = new RegisterPage(driver);
 		 gRegisterPage.clickOnContinueBTN();
 	}
 
 	@Then("user should get warning message for every mandatory fields")
 	public void user_should_get_warning_message_for_every_mandatory_fields() 
-	{
-		gRegisterPage = new RegisterPage(driver);
-		
+	{	
 		prop = ConfigReader.intializeProperties();
 		Assert.assertTrue(gRegisterPage.firstNameErrorText().contains(prop.getProperty("firstNameErrorMessage")));
 		Assert.assertTrue(gRegisterPage.lastNameErrorText().contains(prop.getProperty("lastNameErrorMessage")));

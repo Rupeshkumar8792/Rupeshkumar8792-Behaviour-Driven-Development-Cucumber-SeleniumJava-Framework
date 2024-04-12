@@ -13,8 +13,8 @@ import pages.SearchResultPage;
 public class Search
 {
 	WebDriver driver = DriverFactory.getDriver();
-	HomePage gHomePage;
-	SearchResultPage gSearchResultPage;
+	HomePage gHomePage = new HomePage(driver);
+	SearchResultPage 	gSearchResultPage = new SearchResultPage(driver);
 	
 	@Given("user launchs the application")
 	public void user_launchs_the_application() 
@@ -25,7 +25,6 @@ public class Search
 	@When("User enter the valid product {string} into the search bar")
 	public void user_enter_the_valid_product_into_the_search_bar(String productName) 
 	{
-		gHomePage = new HomePage(driver);
 		gHomePage.enterInSearchBox(productName);
 	    
 	}
@@ -33,22 +32,18 @@ public class Search
 	@When("User enter the invalid product {string} into the search bar")
 	public void user_enter_the_invalid_product_into_the_search_bar(String invalidProductName) 
 	{
-		gHomePage = new HomePage(driver);
 		gHomePage.enterInSearchBox(invalidProductName);
 	}
 
 	@When("user clicks on the search Button")
 	public void user_clicks_on_the_search_button() 
 	{
-		gHomePage = new HomePage(driver);
 		gHomePage.clickOnSearchButton();
-
 	}
 
 	@Then("user should be able to view the HP product")
 	public void user_should_be_able_to_view_the_hp_product() 
 	{
-		gSearchResultPage = new SearchResultPage(driver);
 		Assert.assertTrue(gSearchResultPage.validHPProduct());
 	}
 
@@ -61,7 +56,6 @@ public class Search
 	@Then("user should be able to view the no product matching message")
 	public void user_should_be_able_to_view_the_no_product_matching_message()
 	{
-		gSearchResultPage = new SearchResultPage(driver);
 		Assert.assertEquals(gSearchResultPage.invalidProductErrorMessage(), "There is no product that matches the search criteria.");
 	}
 
