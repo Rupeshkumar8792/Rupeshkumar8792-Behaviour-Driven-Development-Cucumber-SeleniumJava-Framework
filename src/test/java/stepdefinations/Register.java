@@ -1,6 +1,7 @@
 package stepdefinations;
 
 import java.util.Map;
+import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
@@ -14,12 +15,14 @@ import pages.AccountSuccessPage;
 import pages.HomePage;
 import pages.RegisterPage;
 import utils.CommonUtils;
+import utils.ConfigReader;
 
 public class Register 
 {
 	WebDriver driver = DriverFactory.getDriver();
 	HomePage gHomePage;
 	RegisterPage gRegisterPage;
+	Properties prop;
 	
 	@Given("user should navigates to the registration page")
 	public void user_should_navigates_to_the_registration_page() 
@@ -98,4 +101,23 @@ public class Register
 		 Assert.assertEquals(gRegisterPage.failureMessage(), "Warning: E-Mail Address is already registered!");
 	}
 	
+	@When("user dont enter any details into fields")
+	public void user_dont_enter_any_details_into_fields() 
+	{
+		gRegisterPage = new RegisterPage(driver);
+		 gRegisterPage.clickOnContinueBTN();
+	}
+
+	@Then("user should get warning message for every mandatory fields")
+	public void user_should_get_warning_message_for_every_mandatory_fields() 
+	{
+		gRegisterPage = new RegisterPage(driver);
+		
+		prop = ConfigReader.intializeProperties();
+		Assert.assertTrue(gRegisterPage.firstNameErrorText().contains(prop.getProperty("firstNameErrorMessage")));
+		Assert.assertTrue(gRegisterPage.lastNameErrorText().contains(prop.getProperty("lastNameErrorMessage")));
+		Assert.assertTrue(gRegisterPage.emailErrorText().contains(prop.getProperty("emailErrorMessage")));
+		Assert.assertTrue(gRegisterPage.telephoneErrorText().contains(prop.getProperty("telephoneErrorMessage")));
+		Assert.assertTrue(gRegisterPage.passwordErrorText().contains(prop.getProperty("passwordErrorMessage")));
+	}
 }

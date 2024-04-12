@@ -22,6 +22,12 @@ public class HomePage
 	
 	@FindBy(xpath = "//a[text()='Login']")
 	private WebElement login;
+	
+	@FindBy(xpath = "//div[@id=\\\"search\\\"]//input")
+	private WebElement searchBox;
+	
+	@FindBy(xpath = "//button[@class=\\\"btn btn-default btn-lg\\")
+	private WebElement searchButton;
 
 	public void clickOnMyAccount()
 	{
@@ -36,6 +42,17 @@ public class HomePage
 	public void clickOnLogin()
 	{
 		login.click();
+	}
+	
+	public void enterInSearchBox(String searchProductText) 
+	{
+		searchBox.sendKeys(searchProductText);
+	}
+	
+	public void clickOnSearchButton() 
+	{
+		searchButton.click();
+
 	}
 	
 }
