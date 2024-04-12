@@ -2,7 +2,6 @@ package stepdefinations;
 
 import java.util.Map;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
@@ -11,6 +10,7 @@ import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import pages.AccountSuccessPage;
 import pages.HomePage;
 import pages.RegisterPage;
 import utils.CommonUtils;
@@ -65,10 +65,8 @@ public class Register
 	@Then("user should be able to view the successful registration message")
 	public void user_should_be_able_to_view_the_successful_registration_message() 
 	{
-		gRegisterPage = new RegisterPage(driver);
-		
-	   String actual = gRegisterPage.getSuccessMessage();
-	   Assert.assertEquals(actual, "Your Account Has Been Created!");
+		AccountSuccessPage lAccountSuccessPage  = new AccountSuccessPage(driver);
+	   Assert.assertEquals(lAccountSuccessPage.getSuccessMessage(), "Your Account Has Been Created!");
 	   
 	}
 
