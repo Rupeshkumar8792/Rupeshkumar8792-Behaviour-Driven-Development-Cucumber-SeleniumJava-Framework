@@ -37,3 +37,9 @@ And user checks in user policy
 And user clicks on continue button
 Then user should be able to view appropriate error message
 
+Scenario: Verify and Validate the registration functionality without entering any details
+Given user should navigates to the registration page
+When user dont enter any details into fields
+And user clicks on continue button
+Then user should get warning message for every mandatory fields
+
