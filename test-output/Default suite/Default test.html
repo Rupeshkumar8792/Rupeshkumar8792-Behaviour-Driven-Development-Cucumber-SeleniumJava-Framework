@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>8/4/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>11/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Apr 12 21:52:00 IST 2024</td>
+<td>Started on:</td><td>Fri Apr 12 22:40:57 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>138 seconds (138990 ms)</td>
+<tr><td>Total time:</td><td>116 seconds (116299 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,204 +76,6 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='runner.Runner.runScenario()'><b>runScenario</b><br>Test class: runner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify and Validate the search functionality with Invalid details", "Search Functionality"</td>
-<td><div><pre>org.openqa.selenium.JavascriptException: javascript error: {&quot;status&quot;:32,&quot;value&quot;:&quot;Unable to locate an element with the xpath expression //div[@id=\\\&quot;search\\\&quot;]//input because of the following error:\nSyntaxError: Failed to execute &apos;evaluate&apos; on &apos;Document&apos;: The string &apos;//div[@id=\\\&quot;search\\\&quot;]//input&apos; is not a valid XPath expression.&quot;}
-  (Session info: chrome=123.0.6312.122)
-Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [885395562559bf4c27661d9102c058e2, findElement {value=//div[@id=\&quot;search\&quot;]//input, using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.122, chrome: {chromedriverVersion: 123.0.6312.122 (31f8248cdd9..., userDataDir: C:\Users\RUPESH~1.SUR\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55758}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55758/devtoo..., se:cdpVersion: 123.0.6312.122, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 885395562559bf4c27661d9102c058e2
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy23.sendKeys(Unknown Source)
-	at pages.HomePage.enterInSearchBox(HomePage.java:49)
-	at stepdefinations.Search.user_enter_the_invalid_product_into_the_search_bar(Search.java:37)
-	at ✽.User enter the invalid product &quot;HONDA&quot; into the search bar(file:///C:/Users/rupeshkumar.suryawan/eclipse-workspace/BDDCucumberSeleniumJava/src/test/resources/features/Search.feature:11)
-</pre></div><a href='#' onClick='toggleBox("stack-trace204339470", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace204339470'><pre>org.openqa.selenium.JavascriptException: javascript error: {&quot;status&quot;:32,&quot;value&quot;:&quot;Unable to locate an element with the xpath expression //div[@id=\\\&quot;search\\\&quot;]//input because of the following error:\nSyntaxError: Failed to execute &apos;evaluate&apos; on &apos;Document&apos;: The string &apos;//div[@id=\\\&quot;search\\\&quot;]//input&apos; is not a valid XPath expression.&quot;}
-  (Session info: chrome=123.0.6312.122)
-Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [885395562559bf4c27661d9102c058e2, findElement {value=//div[@id=\&quot;search\&quot;]//input, using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.122, chrome: {chromedriverVersion: 123.0.6312.122 (31f8248cdd9..., userDataDir: C:\Users\RUPESH~1.SUR\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55758}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55758/devtoo..., se:cdpVersion: 123.0.6312.122, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 885395562559bf4c27661d9102c058e2
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy23.sendKeys(Unknown Source)
-	at pages.HomePage.enterInSearchBox(HomePage.java:49)
-	at stepdefinations.Search.user_enter_the_invalid_product_into_the_search_bar(Search.java:37)
-	at ✽.User enter the invalid product &quot;HONDA&quot; into the search bar(file:///C:/Users/rupeshkumar.suryawan/eclipse-workspace/BDDCucumberSeleniumJava/src/test/resources/features/Search.feature:11)
-</pre></div></td>
-<td>10</td>
-<td>runner.Runner@fbd1f6</td></tr>
-<tr>
-<td title='runner.Runner.runScenario()'><b>runScenario</b><br>Test class: runner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify and Validate the search functionality without entering any details", "Search Functionality"</td>
-<td><div><pre>org.openqa.selenium.JavascriptException: javascript error: {&quot;status&quot;:32,&quot;value&quot;:&quot;Unable to locate an element with the xpath expression //div[@id=\\\&quot;search\\\&quot;]//input because of the following error:\nSyntaxError: Failed to execute &apos;evaluate&apos; on &apos;Document&apos;: The string &apos;//div[@id=\\\&quot;search\\\&quot;]//input&apos; is not a valid XPath expression.&quot;}
-  (Session info: chrome=123.0.6312.122)
-Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [d24d78dae99ef62764704bb1004ab7c0, findElement {value=//div[@id=\&quot;search\&quot;]//input, using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.122, chrome: {chromedriverVersion: 123.0.6312.122 (31f8248cdd9..., userDataDir: C:\Users\RUPESH~1.SUR\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55822}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55822/devtoo..., se:cdpVersion: 123.0.6312.122, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: d24d78dae99ef62764704bb1004ab7c0
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy23.sendKeys(Unknown Source)
-	at pages.HomePage.enterInSearchBox(HomePage.java:49)
-	at stepdefinations.Search.user_does_not_enter_the_any_product_into_the_search_bar(Search.java:72)
-	at ✽.User does not enter the any product into the search bar(file:///C:/Users/rupeshkumar.suryawan/eclipse-workspace/BDDCucumberSeleniumJava/src/test/resources/features/Search.feature:17)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1148088421", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1148088421'><pre>org.openqa.selenium.JavascriptException: javascript error: {&quot;status&quot;:32,&quot;value&quot;:&quot;Unable to locate an element with the xpath expression //div[@id=\\\&quot;search\\\&quot;]//input because of the following error:\nSyntaxError: Failed to execute &apos;evaluate&apos; on &apos;Document&apos;: The string &apos;//div[@id=\\\&quot;search\\\&quot;]//input&apos; is not a valid XPath expression.&quot;}
-  (Session info: chrome=123.0.6312.122)
-Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [d24d78dae99ef62764704bb1004ab7c0, findElement {value=//div[@id=\&quot;search\&quot;]//input, using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.122, chrome: {chromedriverVersion: 123.0.6312.122 (31f8248cdd9..., userDataDir: C:\Users\RUPESH~1.SUR\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55822}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55822/devtoo..., se:cdpVersion: 123.0.6312.122, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: d24d78dae99ef62764704bb1004ab7c0
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy23.sendKeys(Unknown Source)
-	at pages.HomePage.enterInSearchBox(HomePage.java:49)
-	at stepdefinations.Search.user_does_not_enter_the_any_product_into_the_search_bar(Search.java:72)
-	at ✽.User does not enter the any product into the search bar(file:///C:/Users/rupeshkumar.suryawan/eclipse-workspace/BDDCucumberSeleniumJava/src/test/resources/features/Search.feature:17)
-</pre></div></td>
-<td>9</td>
-<td>runner.Runner@fbd1f6</td></tr>
-<tr>
-<td title='runner.Runner.runScenario()'><b>runScenario</b><br>Test class: runner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify and Validate the search functionality with valid details", "Search Functionality"</td>
-<td><div><pre>org.openqa.selenium.JavascriptException: javascript error: {&quot;status&quot;:32,&quot;value&quot;:&quot;Unable to locate an element with the xpath expression //div[@id=\\\&quot;search\\\&quot;]//input because of the following error:\nSyntaxError: Failed to execute &apos;evaluate&apos; on &apos;Document&apos;: The string &apos;//div[@id=\\\&quot;search\\\&quot;]//input&apos; is not a valid XPath expression.&quot;}
-  (Session info: chrome=123.0.6312.122)
-Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [a87168eca1ba41e5a8eaed0c9ffe6828, findElement {value=//div[@id=\&quot;search\&quot;]//input, using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.122, chrome: {chromedriverVersion: 123.0.6312.122 (31f8248cdd9..., userDataDir: C:\Users\RUPESH~1.SUR\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55684}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55684/devtoo..., se:cdpVersion: 123.0.6312.122, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: a87168eca1ba41e5a8eaed0c9ffe6828
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy23.sendKeys(Unknown Source)
-	at pages.HomePage.enterInSearchBox(HomePage.java:49)
-	at stepdefinations.Search.user_enter_the_valid_product_into_the_search_bar(Search.java:29)
-	at ✽.User enter the valid product &quot;HP&quot; into the search bar(file:///C:/Users/rupeshkumar.suryawan/eclipse-workspace/BDDCucumberSeleniumJava/src/test/resources/features/Search.feature:5)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1970518510", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1970518510'><pre>org.openqa.selenium.JavascriptException: javascript error: {&quot;status&quot;:32,&quot;value&quot;:&quot;Unable to locate an element with the xpath expression //div[@id=\\\&quot;search\\\&quot;]//input because of the following error:\nSyntaxError: Failed to execute &apos;evaluate&apos; on &apos;Document&apos;: The string &apos;//div[@id=\\\&quot;search\\\&quot;]//input&apos; is not a valid XPath expression.&quot;}
-  (Session info: chrome=123.0.6312.122)
-Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [a87168eca1ba41e5a8eaed0c9ffe6828, findElement {value=//div[@id=\&quot;search\&quot;]//input, using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.122, chrome: {chromedriverVersion: 123.0.6312.122 (31f8248cdd9..., userDataDir: C:\Users\RUPESH~1.SUR\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55684}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55684/devtoo..., se:cdpVersion: 123.0.6312.122, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: a87168eca1ba41e5a8eaed0c9ffe6828
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy23.sendKeys(Unknown Source)
-	at pages.HomePage.enterInSearchBox(HomePage.java:49)
-	at stepdefinations.Search.user_enter_the_valid_product_into_the_search_bar(Search.java:29)
-	at ✽.User enter the valid product &quot;HP&quot; into the search bar(file:///C:/Users/rupeshkumar.suryawan/eclipse-workspace/BDDCucumberSeleniumJava/src/test/resources/features/Search.feature:5)
-</pre></div></td>
-<td>10</td>
-<td>runner.Runner@fbd1f6</td></tr>
-<tr>
 <td title='runner.Runner.runScenario()'><b>runScenario</b><br>Test class: runner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify and Validate the login functionality without entering any credentials", "Login Functionality"</td>
 <td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[text()=&apos;Edit your account information&apos;]&quot;}
   (Session info: chrome=123.0.6312.122)
@@ -281,9 +83,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [029035c43d2a048ec276b8c9cce4bc8c, findElement {value=//a[text()=&apos;Edit your account information&apos;], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.122, chrome: {chromedriverVersion: 123.0.6312.122 (31f8248cdd9..., userDataDir: C:\Users\RUPESH~1.SUR\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53827}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53827/devtoo..., se:cdpVersion: 123.0.6312.122, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 029035c43d2a048ec276b8c9cce4bc8c
+Command: [d44a8fed487f902eef800e98ca785e6f, findElement {value=//a[text()=&apos;Edit your account information&apos;], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.122, chrome: {chromedriverVersion: 123.0.6312.122 (31f8248cdd9..., userDataDir: C:\Users\RUPESH~1.SUR\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65347}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65347/devtoo..., se:cdpVersion: 123.0.6312.122, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d44a8fed487f902eef800e98ca785e6f
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -306,16 +108,16 @@ Session ID: 029035c43d2a048ec276b8c9cce4bc8c
 	at pages.MyAccountPage.editYourAccountInformationText(MyAccountPage.java:22)
 	at stepdefinations.Login.user_should_able_to_log_into_the_app_successfully(Login.java:61)
 	at ✽.user should able to log into the app successfully(file:///C:/Users/rupeshkumar.suryawan/eclipse-workspace/BDDCucumberSeleniumJava/src/test/resources/features/Login.feature:36)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1523957322", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1523957322'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[text()=&apos;Edit your account information&apos;]&quot;}
+</pre></div><a href='#' onClick='toggleBox("stack-trace1937575946", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1937575946'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[text()=&apos;Edit your account information&apos;]&quot;}
   (Session info: chrome=123.0.6312.122)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [029035c43d2a048ec276b8c9cce4bc8c, findElement {value=//a[text()=&apos;Edit your account information&apos;], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.122, chrome: {chromedriverVersion: 123.0.6312.122 (31f8248cdd9..., userDataDir: C:\Users\RUPESH~1.SUR\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53827}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53827/devtoo..., se:cdpVersion: 123.0.6312.122, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 029035c43d2a048ec276b8c9cce4bc8c
+Command: [d44a8fed487f902eef800e98ca785e6f, findElement {value=//a[text()=&apos;Edit your account information&apos;], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.122, chrome: {chromedriverVersion: 123.0.6312.122 (31f8248cdd9..., userDataDir: C:\Users\RUPESH~1.SUR\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65347}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65347/devtoo..., se:cdpVersion: 123.0.6312.122, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d44a8fed487f902eef800e98ca785e6f
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -339,7 +141,7 @@ Session ID: 029035c43d2a048ec276b8c9cce4bc8c
 	at stepdefinations.Login.user_should_able_to_log_into_the_app_successfully(Login.java:61)
 	at ✽.user should able to log into the app successfully(file:///C:/Users/rupeshkumar.suryawan/eclipse-workspace/BDDCucumberSeleniumJava/src/test/resources/features/Login.feature:36)
 </pre></div></td>
-<td>19</td>
+<td>12</td>
 <td>runner.Runner@fbd1f6</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
@@ -351,34 +153,49 @@ Session ID: 029035c43d2a048ec276b8c9cce4bc8c
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='runner.Runner.runScenario()'><b>runScenario</b><br>Test class: runner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify and Validate the login functionality with invalid email and valid password", "Login Functionality"</td>
+<td title='runner.Runner.runScenario()'><b>runScenario</b><br>Test class: runner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify and Validate the search functionality with Invalid details", "Search Functionality"</td>
 <td></td>
-<td>13</td>
-<td>runner.Runner@fbd1f6</td></tr>
-<tr>
-<td title='runner.Runner.runScenario()'><b>runScenario</b><br>Test class: runner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify and Validate the registration functionality without entering any details", "Registration Functionality"</td>
-<td></td>
-<td>9</td>
-<td>runner.Runner@fbd1f6</td></tr>
-<tr>
-<td title='runner.Runner.runScenario()'><b>runScenario</b><br>Test class: runner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify and Validate the Registration functionality with all details", "Registration Functionality"</td>
-<td></td>
-<td>12</td>
+<td>7</td>
 <td>runner.Runner@fbd1f6</td></tr>
 <tr>
 <td title='runner.Runner.runScenario()'><b>runScenario</b><br>Test class: runner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify and Validate the Registration functionality with mandatory details", "Registration Functionality"</td>
 <td></td>
-<td>13</td>
+<td>12</td>
+<td>runner.Runner@fbd1f6</td></tr>
+<tr>
+<td title='runner.Runner.runScenario()'><b>runScenario</b><br>Test class: runner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify and Validate the Registration functionality with all details", "Registration Functionality"</td>
+<td></td>
+<td>10</td>
+<td>runner.Runner@fbd1f6</td></tr>
+<tr>
+<td title='runner.Runner.runScenario()'><b>runScenario</b><br>Test class: runner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify and Validate the registration functionality without entering any details", "Registration Functionality"</td>
+<td></td>
+<td>10</td>
+<td>runner.Runner@fbd1f6</td></tr>
+<tr>
+<td title='runner.Runner.runScenario()'><b>runScenario</b><br>Test class: runner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify and Validate the search functionality with valid details", "Search Functionality"</td>
+<td></td>
+<td>7</td>
+<td>runner.Runner@fbd1f6</td></tr>
+<tr>
+<td title='runner.Runner.runScenario()'><b>runScenario</b><br>Test class: runner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify and Validate the login functionality with invalid email and valid password", "Login Functionality"</td>
+<td></td>
+<td>9</td>
 <td>runner.Runner@fbd1f6</td></tr>
 <tr>
 <td title='runner.Runner.runScenario()'><b>runScenario</b><br>Test class: runner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify and Validate the login functionality with valid email and invalid password", "Login Functionality"</td>
 <td></td>
-<td>11</td>
+<td>8</td>
+<td>runner.Runner@fbd1f6</td></tr>
+<tr>
+<td title='runner.Runner.runScenario()'><b>runScenario</b><br>Test class: runner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify and Validate the search functionality without entering any details", "Search Functionality"</td>
+<td></td>
+<td>7</td>
 <td>runner.Runner@fbd1f6</td></tr>
 <tr>
 <td title='runner.Runner.runScenario()'><b>runScenario</b><br>Test class: runner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify and Validate the login functionality with valid credentials", "Login Functionality"</td>
 <td></td>
-<td>11</td>
+<td>10</td>
 <td>runner.Runner@fbd1f6</td></tr>
 <tr>
 <td title='runner.Runner.runScenario()'><b>runScenario</b><br>Test class: runner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify and Validate the login functionality with invalid credentials", "Login Functionality"</td>

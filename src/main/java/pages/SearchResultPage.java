@@ -27,6 +27,7 @@ public class SearchResultPage
 	
 	public String  invalidProductErrorMessage() 
 	{
+		System.out.println(invalidProductErrorMessage.getText());
 		return invalidProductErrorMessage.getText();
 	}
 }
