@@ -43,6 +43,9 @@ public class RegisterPage
 	
 	@FindBy(xpath = "//div[@id='content']//h1[text()='Your Account Has Been Created!']")
 	private WebElement successMessage;
+	
+	@FindBy(xpath = "//div[@class='alert alert-danger alert-dismissible'][text()='Warning: E-Mail Address is already registered!']")
+	private WebElement failureMessage;
 
 	
 	public void enterFirstName(String firstNameText) 
@@ -93,5 +96,10 @@ public class RegisterPage
 	public String getSuccessMessage()
 	{
 		return successMessage.getText();
+	}
+	
+	public String failureMessage()
+	{
+		return failureMessage.getText();
 	}
 }

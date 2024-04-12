@@ -77,4 +77,25 @@ public class Register
 		 gRegisterPage.clickOnYesSuscribeButton();
 	}
 	
+	@When("user enters the details into duplicate detail below fields")
+	public void user_enters_the_details_into_duplicate_detail_below_fields(DataTable dataTable) 
+	{
+ Map<String, String> dataMap =  dataTable.asMap(String.class,String.class);
+		 
+		 gRegisterPage = new RegisterPage(driver);
+		 gRegisterPage.enterFirstName(dataMap.get("firstName"));
+		 gRegisterPage.enterLastName(dataMap.get("lastName"));
+		 gRegisterPage.enterEmailID(dataMap.get("email"));
+		 gRegisterPage.enterTelephoneNumber(dataMap.get("telephone"));
+		 gRegisterPage.enterPassoword(dataMap.get("password"));
+		 gRegisterPage.enterConfirmPassword(dataMap.get("password"));
+	}
+
+	@Then("user should be able to view appropriate error message")
+	public void user_should_be_able_to_view_appropriate_error_message() 
+	{
+		 gRegisterPage = new RegisterPage(driver);
+		 Assert.assertEquals(gRegisterPage.failureMessage(), "Warning: E-Mail Address is already registered!");
+	}
+	
 }
