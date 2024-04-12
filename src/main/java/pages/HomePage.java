@@ -23,10 +23,10 @@ public class HomePage
 	@FindBy(xpath = "//a[text()='Login']")
 	private WebElement login;
 	
-	@FindBy(xpath = "//div[@id=\\\"search\\\"]//input")
+	@FindBy(xpath = "//input[@type='text']")
 	private WebElement searchBox;
 	
-	@FindBy(xpath = "//button[@class=\\\"btn btn-default btn-lg\\")
+	@FindBy(xpath = "//button[@class='btn btn-default btn-lg']")
 	private WebElement searchButton;
 
 	public void clickOnMyAccount()

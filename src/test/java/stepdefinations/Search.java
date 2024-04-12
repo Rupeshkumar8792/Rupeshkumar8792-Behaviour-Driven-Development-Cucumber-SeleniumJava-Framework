@@ -62,13 +62,13 @@ public class Search
 	public void user_should_be_able_to_view_the_no_product_matching_message()
 	{
 		gSearchResultPage = new SearchResultPage(driver);
-		Assert.assertEquals(gSearchResultPage.invalidProductErrorMessage(), "There is no product that matches the search criteria.s");
+		Assert.assertEquals(gSearchResultPage.invalidProductErrorMessage(), "There is no product that matches the search criteria.");
 	}
 
 	@When("User does not enter the any product into the search bar")
 	public void user_does_not_enter_the_any_product_into_the_search_bar() 
 	{
 		gHomePage = new HomePage(driver);
-		gHomePage.enterInSearchBox("");
+
 	}
 }
