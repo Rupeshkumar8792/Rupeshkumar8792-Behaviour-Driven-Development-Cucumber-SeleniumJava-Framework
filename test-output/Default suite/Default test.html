@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>11/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sat Apr 13 10:17:48 IST 2024</td>
+<td>Started on:</td><td>Sat Apr 13 11:59:06 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>118 seconds (118599 ms)</td>
+<tr><td>Total time:</td><td>142 seconds (142172 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -77,71 +77,25 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='runner.Runner.runScenario()'><b>runScenario</b><br>Test class: runner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify and Validate the login functionality without entering any credentials", "Login Functionality"</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[text()=&apos;Edit your account information&apos;]&quot;}
-  (Session info: chrome=123.0.6312.122)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [1bc6c70834cc20886c8f6c4f250891f5, findElement {value=//a[text()=&apos;Edit your account information&apos;], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.122, chrome: {chromedriverVersion: 123.0.6312.122 (31f8248cdd9..., userDataDir: C:\Users\RUPESH~1.SUR\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55037}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55037/devtoo..., se:cdpVersion: 123.0.6312.122, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 1bc6c70834cc20886c8f6c4f250891f5
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy25.getText(Unknown Source)
-	at pages.MyAccountPage.editYourAccountInformationText(MyAccountPage.java:22)
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;Object.getClass()&quot; because &quot;exceptionDriver&quot; is null
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at utils.ElementsUtils.explicitWaitForVisibilityOfWebElements(ElementsUtils.java:43)
+	at utils.ElementsUtils.fetchTextUsinggetText(ElementsUtils.java:102)
+	at pages.MyAccountPage.editYourAccountInformationText(MyAccountPage.java:25)
 	at stepdefinations.Login.user_should_able_to_log_into_the_app_successfully(Login.java:57)
 	at ✽.user should able to log into the app successfully(file:///C:/Users/rupeshkumar.suryawan/eclipse-workspace/BDDCucumberSeleniumJava/src/test/resources/features/Login.feature:36)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1942631655", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1942631655'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[text()=&apos;Edit your account information&apos;]&quot;}
-  (Session info: chrome=123.0.6312.122)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [1bc6c70834cc20886c8f6c4f250891f5, findElement {value=//a[text()=&apos;Edit your account information&apos;], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.122, chrome: {chromedriverVersion: 123.0.6312.122 (31f8248cdd9..., userDataDir: C:\Users\RUPESH~1.SUR\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55037}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55037/devtoo..., se:cdpVersion: 123.0.6312.122, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 1bc6c70834cc20886c8f6c4f250891f5
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy25.getText(Unknown Source)
-	at pages.MyAccountPage.editYourAccountInformationText(MyAccountPage.java:22)
+</pre></div><a href='#' onClick='toggleBox("stack-trace663326227", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace663326227'><pre>java.lang.NullPointerException: Cannot invoke &quot;Object.getClass()&quot; because &quot;exceptionDriver&quot; is null
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at utils.ElementsUtils.explicitWaitForVisibilityOfWebElements(ElementsUtils.java:43)
+	at utils.ElementsUtils.fetchTextUsinggetText(ElementsUtils.java:102)
+	at pages.MyAccountPage.editYourAccountInformationText(MyAccountPage.java:25)
 	at stepdefinations.Login.user_should_able_to_log_into_the_app_successfully(Login.java:57)
 	at ✽.user should able to log into the app successfully(file:///C:/Users/rupeshkumar.suryawan/eclipse-workspace/BDDCucumberSeleniumJava/src/test/resources/features/Login.feature:36)
 </pre></div></td>
-<td>10</td>
+<td>38</td>
 <td>runner.Runner@fbd1f6</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
@@ -153,34 +107,19 @@ Session ID: 1bc6c70834cc20886c8f6c4f250891f5
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='runner.Runner.runScenario()'><b>runScenario</b><br>Test class: runner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify and Validate the Registration functionality with mandatory details", "Registration Functionality"</td>
-<td></td>
-<td>8</td>
-<td>runner.Runner@fbd1f6</td></tr>
-<tr>
-<td title='runner.Runner.runScenario()'><b>runScenario</b><br>Test class: runner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify and Validate the login functionality with valid email and invalid password", "Login Functionality"</td>
-<td></td>
-<td>7</td>
-<td>runner.Runner@fbd1f6</td></tr>
-<tr>
 <td title='runner.Runner.runScenario()'><b>runScenario</b><br>Test class: runner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify and Validate the search functionality with Invalid details", "Search Functionality"</td>
 <td></td>
-<td>9</td>
-<td>runner.Runner@fbd1f6</td></tr>
-<tr>
-<td title='runner.Runner.runScenario()'><b>runScenario</b><br>Test class: runner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify and Validate the search functionality without entering any details", "Search Functionality"</td>
-<td></td>
-<td>15</td>
+<td>6</td>
 <td>runner.Runner@fbd1f6</td></tr>
 <tr>
 <td title='runner.Runner.runScenario()'><b>runScenario</b><br>Test class: runner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify and Validate the registration functionality without entering any details", "Registration Functionality"</td>
 <td></td>
-<td>8</td>
+<td>10</td>
 <td>runner.Runner@fbd1f6</td></tr>
 <tr>
-<td title='runner.Runner.runScenario()'><b>runScenario</b><br>Test class: runner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify and Validate the search functionality with valid details", "Search Functionality"</td>
+<td title='runner.Runner.runScenario()'><b>runScenario</b><br>Test class: runner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify and Validate the Registration functionality by entering duplicate detail", "Registration Functionality"</td>
 <td></td>
-<td>8</td>
+<td>10</td>
 <td>runner.Runner@fbd1f6</td></tr>
 <tr>
 <td title='runner.Runner.runScenario()'><b>runScenario</b><br>Test class: runner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify and Validate the login functionality with invalid email and valid password", "Login Functionality"</td>
@@ -190,22 +129,37 @@ Session ID: 1bc6c70834cc20886c8f6c4f250891f5
 <tr>
 <td title='runner.Runner.runScenario()'><b>runScenario</b><br>Test class: runner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify and Validate the Registration functionality with all details", "Registration Functionality"</td>
 <td></td>
+<td>12</td>
+<td>runner.Runner@fbd1f6</td></tr>
+<tr>
+<td title='runner.Runner.runScenario()'><b>runScenario</b><br>Test class: runner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify and Validate the login functionality with invalid credentials", "Login Functionality"</td>
+<td></td>
+<td>8</td>
+<td>runner.Runner@fbd1f6</td></tr>
+<tr>
+<td title='runner.Runner.runScenario()'><b>runScenario</b><br>Test class: runner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify and Validate the login functionality with valid email and invalid password", "Login Functionality"</td>
+<td></td>
 <td>8</td>
 <td>runner.Runner@fbd1f6</td></tr>
 <tr>
 <td title='runner.Runner.runScenario()'><b>runScenario</b><br>Test class: runner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify and Validate the login functionality with valid credentials", "Login Functionality"</td>
 <td></td>
-<td>16</td>
+<td>11</td>
 <td>runner.Runner@fbd1f6</td></tr>
 <tr>
-<td title='runner.Runner.runScenario()'><b>runScenario</b><br>Test class: runner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify and Validate the login functionality with invalid credentials", "Login Functionality"</td>
+<td title='runner.Runner.runScenario()'><b>runScenario</b><br>Test class: runner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify and Validate the search functionality with valid details", "Search Functionality"</td>
 <td></td>
 <td>7</td>
 <td>runner.Runner@fbd1f6</td></tr>
 <tr>
-<td title='runner.Runner.runScenario()'><b>runScenario</b><br>Test class: runner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify and Validate the Registration functionality by entering duplicate detail", "Registration Functionality"</td>
+<td title='runner.Runner.runScenario()'><b>runScenario</b><br>Test class: runner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify and Validate the search functionality without entering any details", "Search Functionality"</td>
 <td></td>
-<td>7</td>
+<td>6</td>
+<td>runner.Runner@fbd1f6</td></tr>
+<tr>
+<td title='runner.Runner.runScenario()'><b>runScenario</b><br>Test class: runner.Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify and Validate the Registration functionality with mandatory details", "Registration Functionality"</td>
+<td></td>
+<td>10</td>
 <td>runner.Runner@fbd1f6</td></tr>
 </table><p>
 </body>

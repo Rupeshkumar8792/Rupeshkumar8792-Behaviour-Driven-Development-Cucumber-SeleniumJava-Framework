@@ -9,6 +9,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import utils.CommonUtils;
 import utils.ConfigReader;
 
 public class DriverFactory 
@@ -38,7 +39,7 @@ public class DriverFactory
 		
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(CommonUtils.implicitWait));
 		
 		return driver;
 		

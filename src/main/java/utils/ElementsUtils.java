@@ -23,7 +23,7 @@ public class ElementsUtils
 	
 	public void explicitWaitForClickableItems(WebElement element)
 	{
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(CommonUtils.explicitWait));
 		wait.until(ExpectedConditions.elementToBeClickable(element));
 	}
 	
@@ -31,7 +31,7 @@ public class ElementsUtils
 	{
 		Alert alert = null;
 		
-		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(CommonUtils.explicitWait));
 		alert = wait.until(ExpectedConditions.alertIsPresent());
 		
 		return alert;
@@ -39,7 +39,7 @@ public class ElementsUtils
 	
 	public void explicitWaitForVisibilityOfWebElements(WebElement element)
 	{
-		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(CommonUtils.explicitWait));
 		wait.until(ExpectedConditions.visibilityOf(element));
 	}
 	
