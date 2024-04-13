@@ -12,7 +12,8 @@ import pages.SearchResultPage;
 
 public class Search
 {
-	WebDriver driver = DriverFactory.getDriver();
+	DriverFactory gDriverFactory = new DriverFactory();
+	WebDriver driver = gDriverFactory.getDriver();
 	HomePage gHomePage = new HomePage(driver);
 	SearchResultPage 	gSearchResultPage = new SearchResultPage(driver);
 	
