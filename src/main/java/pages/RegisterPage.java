@@ -5,9 +5,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import utils.ElementsUtils;
+
 public class RegisterPage 
 {
 	WebDriver driver;
+	ElementsUtils gElementsUtils = new ElementsUtils(driver);
 	
 	public RegisterPage(WebDriver driver) 
 	{
@@ -65,81 +68,81 @@ public class RegisterPage
 	
 	public void enterFirstName(String firstNameText) 
 	{
-		firstName.sendKeys(firstNameText);
+		gElementsUtils.typeIntoTheInputBox(firstName, firstNameText);
 	}
 	
 	public void enterLastName(String lastNameText)
 	{
-		lastName.sendKeys(lastNameText);
+		gElementsUtils.typeIntoTheInputBox(lastName, lastNameText);
 	}
 	
 	public void enterEmailID(String emailIDText)
 	{
-		emailID.sendKeys(emailIDText);
+		gElementsUtils.typeIntoTheInputBox(emailID, emailIDText);
 	}
 	
 	public void enterTelephoneNumber(String telephoneNumberText) 
 	{
-		telephoneNumber.sendKeys(telephoneNumberText);
+		gElementsUtils.typeIntoTheInputBox(telephoneNumber, telephoneNumberText);
 	}
 	
 	public void enterPassoword(String passwordText) 
 	{
-		passoword.sendKeys(passwordText);
+		gElementsUtils.typeIntoTheInputBox(passoword, passwordText);
 	}
 	
 	public void enterConfirmPassword(String confirmpasswordText) 
 	{
-		confirmPassword.sendKeys(confirmpasswordText);
+		gElementsUtils.typeIntoTheInputBox(confirmPassword, confirmpasswordText);
 	}
 	
 	public void clickOnYesSuscribeButton() 
 	{
-		yesSuscribeButton.click();
+		gElementsUtils.clickOnWebElement(yesSuscribeButton);
 	}
 
 	public void clickOnPrivacyPolicyBTN() 
 	{
-		privacyPolicyBTN.click();
+		gElementsUtils.clickOnWebElement(privacyPolicyBTN);
 	}
 	
 	public void clickOnContinueBTN() 
 	{
-		continueBTN.click();
+		gElementsUtils.clickOnWebElement(continueBTN);
 	}
 	
 	public String getSuccessMessage()
 	{
-		return successMessage.getText();
+		return gElementsUtils.fetchTextUsinggetText(successMessage);
 	}
 	
 	public String failureMessage()
 	{
-		return failureMessage.getText();
+		return gElementsUtils.fetchTextUsinggetText(failureMessage);
 	}
 	
 	public String firstNameErrorText() 
 	{
-		return firstNameErrorText.getText();
+		return gElementsUtils.fetchTextUsinggetText(firstNameErrorText);
 	}
 	
 	public String lastNameErrorText() 
 	{
-		return lastNameErrorText.getText();
+		return gElementsUtils.fetchTextUsinggetText(lastNameErrorText);
 	}
 	
 	public String emailErrorText() 
 	{
-		return emailErrorText.getText();
+		return gElementsUtils.fetchTextUsinggetText(emailErrorText);
 	}
 	
 	public String telephoneErrorText() 
 	{
-		return telephoneErrorText.getText();
+		return gElementsUtils.fetchTextUsinggetText(telephoneErrorText);
 	}
 	
 	public String passwordErrorText() 
 	{
-		return passwordErrorText.getText();
+		return gElementsUtils.fetchTextUsinggetText(passwordErrorText);
 	}
 }

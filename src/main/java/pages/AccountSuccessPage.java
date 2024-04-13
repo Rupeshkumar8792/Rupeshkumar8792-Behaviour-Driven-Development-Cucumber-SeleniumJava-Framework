@@ -6,9 +6,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import utils.ElementsUtils;
+
 public class AccountSuccessPage 
 {
 	WebDriver driver;
+	ElementsUtils gElementsUtils = new ElementsUtils(driver);
 	
 	public AccountSuccessPage(WebDriver driver) 
 	{
@@ -20,6 +23,6 @@ public class AccountSuccessPage
 	
 	public String getSuccessMessage()
 	{
-		return successMessageHeading.getText();
+		return gElementsUtils.fetchTextUsinggetText(successMessageHeading);
 	}
 }

@@ -21,79 +21,85 @@ public class ElementsUtils
 		PageFactory.initElements(driver, this);
 	}
 	
-	public void explicitWaitForClickableItems(WebElement element, long DurationInSeconds)
+	public void explicitWaitForClickableItems(WebElement element)
 	{
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(DurationInSeconds));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(element));
 	}
 	
-	public Alert explicitWaitForAlerts(long DurationInSeconds)
+	public Alert explicitWaitForAlerts()
 	{
 		Alert alert = null;
 		
-		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(DurationInSeconds));
+		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
 		alert = wait.until(ExpectedConditions.alertIsPresent());
 		
 		return alert;
 	}
 	
-	public void explicitWaitForVisibilityOfWebElements(WebElement element, long DurationInSeconds)
+	public void explicitWaitForVisibilityOfWebElements(WebElement element)
 	{
-		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(DurationInSeconds));
+		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.visibilityOf(element));
 	}
 	
-	public void clickOnWebElement(WebElement element, long DurationInSeconds)
+	public void clickOnWebElement(WebElement element)
 	{
-		explicitWaitForClickableItems(element, DurationInSeconds);
+		explicitWaitForClickableItems(element);
 		element.click();
 	}
 	
-	public void typeIntoTheInputBox(WebElement element, long DurationInSeconds,String inputValue)
+	public void typeIntoTheInputBox(WebElement element,String inputValue)
 	{
-		explicitWaitForClickableItems(element,DurationInSeconds);
+		explicitWaitForClickableItems(element);
 		element.click();
 		element.clear();
 		element.sendKeys(inputValue);
 	}
 	
-	public void selectOptionFromDropdown(WebElement element, long DurationInSeconds,String inputValue) 
+	public void selectOptionFromDropdown(WebElement element,String inputValue) 
 	{
-		explicitWaitForClickableItems(element,DurationInSeconds);
+		explicitWaitForClickableItems(element);
 		Select objSelect = new Select(element);
 		objSelect.selectByVisibleText(inputValue);
 	}
 	
-	public void acceptAlert(long DurationInSeconds) 
+	public void acceptAlert() 
 	{
-		Alert alert =explicitWaitForAlerts(DurationInSeconds);
+		Alert alert =explicitWaitForAlerts();
 		alert.accept();
 	}
 	
-	public void dismissAlert(long DurationInSeconds) 
+	public void dismissAlert() 
 	{
-		Alert alert =explicitWaitForAlerts(DurationInSeconds);
+		Alert alert =explicitWaitForAlerts();
 		alert.dismiss();
 	}
 	
-	public void mouseHoverAndClick(WebElement element, long DurationInSeconds) 
+	public void mouseHoverAndClick(WebElement element) 
 	{
-		explicitWaitForVisibilityOfWebElements(element, DurationInSeconds);
+		explicitWaitForVisibilityOfWebElements(element);
 		Actions objActions = new Actions(driver);
 		objActions.moveToElement(element).build().perform();
 	}
 	
-	public void javascriptExecutorClick(WebElement element, long DurationInSeconds)
+	public void javascriptExecutorClick(WebElement element)
 	{
-		explicitWaitForVisibilityOfWebElements(element, DurationInSeconds);
+		explicitWaitForVisibilityOfWebElements(element);
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		js.executeScript("arguments[0].click();", element);
 	}
 	
-	public void javascriptExecutorTypeInInputBox(WebElement element, long DurationInSeconds,String inputValue)
+	public void javascriptExecutorTypeInInputBox(WebElement element,String inputValue)
 	{
-		explicitWaitForVisibilityOfWebElements(element, DurationInSeconds);
+		explicitWaitForVisibilityOfWebElements(element);
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		js.executeScript("arguments[0].value='"+inputValue+"'", element);
+	}
+	
+	public String fetchTextUsinggetText(WebElement element)
+	{
+		explicitWaitForVisibilityOfWebElements(element);
+		return element.getText();
 	}
 }

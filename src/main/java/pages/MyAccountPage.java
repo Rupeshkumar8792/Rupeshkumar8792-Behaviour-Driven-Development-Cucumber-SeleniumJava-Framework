@@ -5,9 +5,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import utils.ElementsUtils;
+
 public class MyAccountPage 
 {
 	WebDriver driver;
+	ElementsUtils gElementsUtils = new ElementsUtils(driver);
 	
 	public MyAccountPage(WebDriver driver) 
 	{
@@ -19,7 +22,8 @@ public class MyAccountPage
 	
 	public boolean editYourAccountInformationText()
 	{
-		return editYourAccountInformation.getText().contains("Edit your account information");
+		return gElementsUtils.fetchTextUsinggetText(editYourAccountInformation).contains("Edit your account information");
+		
 	}
 	
 }
