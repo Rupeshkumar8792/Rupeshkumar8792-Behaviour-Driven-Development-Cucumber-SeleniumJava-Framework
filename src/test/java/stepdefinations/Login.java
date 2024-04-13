@@ -74,7 +74,7 @@ public class Login
 	public void user_should_able_to_view_appropriate_error_message() 
 	{			
 		SoftAssert sa = new SoftAssert();
-		sa.assertTrue(gLoginPage.getErrorText());
+		sa.assertEquals(gLoginPage.getErrorText(), prop.getProperty("loginErrorMessage"));
 	}
 	
 }

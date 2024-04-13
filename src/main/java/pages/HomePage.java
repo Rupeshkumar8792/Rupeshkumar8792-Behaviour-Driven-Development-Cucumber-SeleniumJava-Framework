@@ -5,9 +5,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import utils.ElementsUtils;
+
 public class HomePage 
 {
 	WebDriver driver;
+	ElementsUtils gElementsUtils = new ElementsUtils(driver);
 	
 	public HomePage(WebDriver driver) 
 	{
@@ -31,28 +34,28 @@ public class HomePage
 
 	public void clickOnMyAccount()
 	{
-		myAccountDropdownMenu.click();
+		gElementsUtils.clickOnWebElement(myAccountDropdownMenu);
 	}
 	
 	public void clickOnRegister()
 	{
-		register.click();
+		gElementsUtils.clickOnWebElement(register);
+		
 	}
 	
 	public void clickOnLogin()
 	{
-		login.click();
+		gElementsUtils.clickOnWebElement(login);
 	}
 	
 	public void enterInSearchBox(String searchProductText) 
 	{
-		searchBox.sendKeys(searchProductText);
+		gElementsUtils.typeIntoTheInputBox(searchBox, searchProductText);
 	}
 	
 	public void clickOnSearchButton() 
 	{
-		searchButton.click();
-
+		gElementsUtils.clickOnWebElement(searchButton);
 	}
 	
 }

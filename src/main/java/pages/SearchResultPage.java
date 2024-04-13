@@ -5,9 +5,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import utils.ElementsUtils;
+
 public class SearchResultPage 
 {
 	WebDriver driver;
+	ElementsUtils gElementsUtils = new ElementsUtils(driver);
 	
 	public SearchResultPage(WebDriver driver) 
 	{
@@ -27,7 +30,6 @@ public class SearchResultPage
 	
 	public String  invalidProductErrorMessage() 
 	{
-		System.out.println(invalidProductErrorMessage.getText());
-		return invalidProductErrorMessage.getText();
+		return gElementsUtils.fetchTextUsinggetText(invalidProductErrorMessage);
 	}
 }
