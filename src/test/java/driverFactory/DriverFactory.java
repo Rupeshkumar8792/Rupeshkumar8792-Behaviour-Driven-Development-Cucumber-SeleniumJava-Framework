@@ -16,7 +16,7 @@ public class DriverFactory
 	static WebDriver driver = null;
 	static Properties prop;
 	
-	public static WebDriver initializeBrowser(String browsername)
+	public WebDriver initializeBrowser(String browsername)
 	{
 		prop = ConfigReader.intializeProperties();
 		
@@ -44,7 +44,7 @@ public class DriverFactory
 		
 	}
 	
-	public static  WebDriver getDriver()
+	public WebDriver getDriver()
 	{
 		return driver;
 		

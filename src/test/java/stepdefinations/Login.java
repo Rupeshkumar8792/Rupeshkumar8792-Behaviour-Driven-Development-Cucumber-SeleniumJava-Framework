@@ -15,7 +15,9 @@ import utils.ConfigReader;
 
 public class Login 
 {
-	WebDriver driver = DriverFactory.getDriver();
+	DriverFactory gDriverFactory = new DriverFactory();
+	WebDriver driver = gDriverFactory.getDriver();
+	
 	HomePage gHomePage = new HomePage(driver);
 	LoginPage gLoginPage = new LoginPage(driver);;
 	MyAccountPage gMyAccountPage = new MyAccountPage(driver);
@@ -59,7 +61,7 @@ public class Login
 	@When("user enters invalid email address {string}")
 	public void user_enters_invalid_email_address(String invalidEmail) 
 	{
-		gLoginPage.enterEmailId(CommonUtils.getEmailwithTimestamps());
+		gLoginPage.enterEmailId(new CommonUtils().getEmailwithTimestamps());
 	}
 
 	@When("user enters invalid password {string}")

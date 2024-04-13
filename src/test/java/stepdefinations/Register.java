@@ -19,7 +19,8 @@ import utils.ConfigReader;
 
 public class Register 
 {
-	WebDriver driver = DriverFactory.getDriver();
+	DriverFactory gDriverFactory = new DriverFactory();
+	WebDriver driver = gDriverFactory.getDriver();
 	HomePage gHomePage = new HomePage(driver);
 	RegisterPage gRegisterPage = new RegisterPage(driver);
 	Properties prop;
@@ -38,7 +39,7 @@ public class Register
 		 
 		 gRegisterPage.enterFirstName(dataMap.get("firstName"));
 		 gRegisterPage.enterLastName(dataMap.get("lastName"));
-		 gRegisterPage.enterEmailID(CommonUtils.getEmailwithTimestamps());
+		 gRegisterPage.enterEmailID(new CommonUtils().getEmailwithTimestamps());
 		 gRegisterPage.enterTelephoneNumber(dataMap.get("telephone"));
 		 gRegisterPage.enterPassoword(dataMap.get("password"));
 		 gRegisterPage.enterConfirmPassword(dataMap.get("password"));
