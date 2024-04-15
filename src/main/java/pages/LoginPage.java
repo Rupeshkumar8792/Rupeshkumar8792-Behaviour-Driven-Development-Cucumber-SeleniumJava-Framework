@@ -34,8 +34,8 @@ public class LoginPage
 	@FindBy(xpath = "//input[@value='Login']")
 	private WebElement loginBTN;
 	
-	@FindBy(xpath ="//*[@id='account-login']/div[1]")
-	private WebElement errorMessage;
+	@FindBy(xpath="//div[contains(@class,'alert-dismissible')]")
+	private WebElement emailPasswordNotMatchingWarning;
 	
 	public void enterEmailId(String emailID) 
 	{
@@ -56,7 +56,7 @@ public class LoginPage
 	
 	public String  getErrorText()
 	{
-		return gElementsUtils.fetchTextUsinggetText(errorMessage);
+		return gElementsUtils.fetchTextUsinggetText(emailPasswordNotMatchingWarning);
 	}
 		
 	
