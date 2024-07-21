@@ -1,6 +1,6 @@
 Feature: Login Functionality
 
-  Scenario Outline: Verify and Validate the login functionality with valid credentials
+  Scenario: Verify and Validate the login functionality with valid credentials
     Given user should navigate to the login page
     When user enters valid email address "rupesh.surya6212@gmail.com"
     And user enters valid password "mahadev@1234"
